@@ -59,7 +59,7 @@ dvbpsi_service_list_dr_t* dvbpsi_DecodeServiceListDr(
     unsigned int service_count = p_descriptor->i_length / 3;
     if ((p_descriptor->i_length < 1) ||
         (p_descriptor->i_length % 3 != 0) ||
-        (service_count>63))
+        (83 < service_count))
       return NULL;
 
     /* Allocate memory */
